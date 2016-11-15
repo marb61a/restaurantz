@@ -9,10 +9,14 @@
   </head>
 
   <body>
-    <%= bootstrap_flash %>
     <div class="container">
-      <%= yield %>  
-    </div>
+    <%= render "layouts/header" %>
+    <%= bootstrap_flash %>
     
+      <%= yield %>  
+    
+    <%= render "layouts/footer" %>
+    <%= render "layouts/script" %>
+    </div>
   </body>
 </html>
