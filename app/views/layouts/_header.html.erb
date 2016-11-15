@@ -13,25 +13,49 @@
       <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
               <li class="dropdown">
-                <%= link_to pages_path, data: { close_others: false, delay: 0, hover: "dropdown"} %>
+                <%= link_to pages_path, data: { close_others: false, delay: 0, hover: "dropdown"} do %>
                   <i class="fa fa-home"></i> Home
                 <% end %>
               </li>
               <li class="dropdown">
-                <%= link_to root_path, data: {close_others: false, delay: 0, hover: "dropdown"} %>
+                <%= link_to root_path, data: {close_others: false, delay: 0, hover: "dropdown"} do %>
                   <i class="fa fa-cutlery"></i> Restaurants 
                 <% end %>
               </li>
               <li class="dropdown">
-                <%= link_to pages_about_path, data: {close_others: false, delay: 0, hover: "dropdown"} %>
+                <%= link_to pages_about_path, data: {close_others: false, delay: 0, hover: "dropdown"} do %>
                   <i class="fa fa-info-circle"></i> About Us
                 <% end %>    
               </li>
               <li>
-                <%= link_to pages_contact_path, data: {close_others: false, delay: 0, hover: "dropdown"} %>
+                <%= link_to pages_contact_path, data: {close_others: false, delay: 0, hover: "dropdown"} do %>
                   <i class="fa fa-envelope"></i> Contact Us
                 <% end %>
               </li>
+              
+              <% if current_user %>
+                <li>
+                  <%= link_to destroy_user_session_path, data: {close_others: false, delay: 0, hover: "dropdown"}, method: :delete do %>
+                    <i class="fa fa-stop-circle-o"></i> Sign Out
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to edit_user_registration_path, data: {close_others: false, delay: 0, hover: "dropdown"} do %>
+                    <i class="fa fa-edit"></i> Edit My Profile
+                  <% end %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to new_user_session_path, data: {close_others: false, delay: 0, hover: "dropdown"} do %>
+                    <i class="fa fa-sign-in"></i> Sign In
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to new_user_registration_path, data: {close_others: false, delay: 0, hover: "dropdown"} do %>
+                    <i class="fa fa-registered"></i> Register
+                  <% end %>
+                </li>
+              <% end%>
           </ul>
       </div>
   </div>

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'pages/about', controller: 'pages', action: 'about'
   get 'pages/contact', controller: 'pages', action: 'contact'
+  
+  resources :pages
 
   root to: 'restaurants#index'
   
