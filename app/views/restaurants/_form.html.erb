@@ -1,0 +1,52 @@
+<%= simple_form_for @restaurant do |form| %>
+    <div class="container">
+        <div class="row">
+           <div class="col-xs-4">
+                <%= form.input :name, label: false, placeholder: "Enter The Restaurant Name" %>
+            </div>
+            <div class="col-xs-4">
+                <%= form.select :category_id, Category.all.map{ |form| [form.name, form.id]} %>
+            </div> 
+        </div>
+        <div class="row"> <!--new row-->
+            <div class="col-xs-8">
+                <%= form.input :description, label: false, placeholder: "Provide a Description" %>    
+            </div>    
+        </div>
+        <div class="row"> <!--new row-->
+            <div class="col-xs-4">
+                <%= form.input :address1, label: false, placeholder: "Street Address" %>
+            </div>
+            <div class="col-xs-4">
+                <%= form.input :address2, label: false, placeholder: "Any Other Address Info" %>
+            </div>
+        </div>
+        <div class="row"> <!--new row-->
+            <div class="col-xs-3">
+                <%= form.input :city, label: false, placeholder: "City" %>
+            </div>
+            <div class="col-xs-3">
+                <%= form.input :state_provence, label: false, placeholder: "State or Provence" %>
+            </div>
+            <div class="col-xs-2">
+                <%= form.input :postalcode, label: false, placeholder: "Zip or Postal Code" %>
+            </div>    
+        </div>
+        <div class="row"> <!--new row-->
+            <div class="col-xs-3">
+                <%= form.input :phone, label: false, placeholder: "Restaurant Telephone" %>    
+            </div>
+            <div class="col-xs-3">
+                <%= form.input :email, label: false, placeholder: "Website or Email" %>
+            </div>
+            <div class="col-xs-3">
+                <%= form.input :image, as: :file, label: "Got a Photo?" %>
+            </div>
+        </div>
+        <div class="row"> <!--new row-->
+            <div class="col-xs-4">
+                 <%= form.submit class: "btn btn-warning"%>
+            </div>    
+        </div>
+    </div>
+<% end %>
