@@ -1,0 +1,42 @@
+<!--http://templateninja.net/themes/arillo/v1.1/green/single.html-->
+<!-- begin:content -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>
+                    <%= @restaurant.name %>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pf-img text-center">
+                <% if @restaurant.image_url.present? %>
+                    <%= image_tag @restaurant.image_url(:restaurant_show) %>
+                <% else %>
+                    <%= image_tag "restaurant_show_dummy.JPG" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <!-- begin:article -->
+            <div class="col-md-9 col-md-push-3">
+                <div class="row">
+                    <div class="col-md-12 single-post">
+                        <div id="myTabContent" class="tab-content">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
