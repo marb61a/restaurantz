@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'pages/contact', controller: 'pages', action: 'contact'
   
   resources :pages
+  resources :restaurants do
+    resources :reviews, except: [:show, :index]
+  end
 
   root to: 'restaurants#index'
   
