@@ -23,7 +23,13 @@ class RestaurantsController < ApplicationController
   end
   
   def show
-    @user = current_user
+    @restaurant = Restaurant.find(params[:id])
+    @reviews = Review.where(restaurant_id: @restaurant) 
+    if @reviews.blank?
+      @average_rating = 0
+    else
+      @average_rating = @reviews.average(:rating).round(2)
+    end
   end
   
   def search
