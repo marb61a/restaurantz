@@ -37,9 +37,51 @@
                                     <div class="col-md-12">
                                         <h2></h2>
                                         <p>
+                                            <% if @reviews.blank? %>
+                                                This establishment has no reviews.  Be the first to share your dining experience!
+                                            <% else %>
+                                                <%= @restaurant.name %> has an average rating of (<% @average_rating %>) stars
+                                                <span class="star-rating" data-score=<%= @average_rating %>></span>
+                                                <%= @reviews.count %>
+                                                <%= "client".pluralize@reviews.count %>
+                                            <% end %>
                                             <h3 class="text-muted">
                                                 Restaurant Overview
                                             </h3>
+                                            <%= link_to "Edit", edit_restaurant_path, 
+                                            class: "btn btn-warning btn-xs" if current_user.try(:admin? %>
+                                            <%= link_to "Delete", 
+                                            restaurant_path, method: :delete,  data: {confirm: "Are You Really Sure?"},
+                                            class: "btn btn-danger btn-xs" if current_user.try(:admin?) %> 
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td>
+                                                        <strong>Restaurant Name </strong>
+                                                    </td>
+                                                    <td>
+                                                        <%= @restaurant.name %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Website </strong>    
+                                                    </td>
+                                                    <td>
+                                                        <%= @restaurant.email %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Address</strong>
+                                                    </td>
+                                                    <td>
+                                                        <%= @restaurant.address1 %>
+                                                        <span>
+                                                            <%= @restaurant.address2 %>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </p>
                                     </div>
                                 </div>
