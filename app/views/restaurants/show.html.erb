@@ -81,7 +81,37 @@
                                                         </span>
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>
+                                                            City | State/Provence | <br /> Postal Code
+                                                        </strong>
+                                                    </td>
+                                                    <td>
+                                                        <%= @restaurant.titleize %> |
+                                                        <span>
+                                                            <%= @restaurant.state_provence.upcase %> |
+                                                        </span>
+                                                        <span>
+                                                            <%= @restaurant.postalcode %>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Telephone</strong>
+                                                    </td>
+                                                    <td>
+                                                        <% @restaurant.phone %>
+                                                    </td>
+                                                </tr>
                                             </table>
+                                            <h3></h3>
+                                            <div class="row"></div>
+                                            <h3>More About <%= @restaurant.name %> </h3>
+                                            <p>
+                                                <%= @restaurant.description %>
+                                            </p>
                                         </p>
                                     </div>
                                 </div>
