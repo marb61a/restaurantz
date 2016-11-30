@@ -5,6 +5,11 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create] 
   
   def index
+    if current_user
+      
+    else
+      
+    end
   end
   
   def new
@@ -40,9 +45,23 @@ class RestaurantsController < ApplicationController
   end
   
   def update
+    if @restaurant.update
+      flash[:success] = ""
+      redirect_to @restaurant
+    else
+      flash[:danger] = ""
+      render :edit
+    end
   end
   
   def destroy
+    if @restaurant.destroy
+      flash[:success] = ""
+      redirect_to root_path
+    else
+      flash[:danger] = ""
+      render @restaurant
+    end
   end
   
   private
