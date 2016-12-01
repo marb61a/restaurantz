@@ -25,6 +25,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'bootstrap-sass-extras', '~> 0.0.7'
 gem 'devise', '~> 4.2'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.0'
+gem 'geocoder', '~> 1.3', '>= 1.3.5'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
