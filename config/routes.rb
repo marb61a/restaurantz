@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :pages
   resources :restaurants do
     resources :reviews, except: [:show, :index]
+    collection do
+      get 'search'
+    end
   end
 
   root to: 'restaurants#index'
