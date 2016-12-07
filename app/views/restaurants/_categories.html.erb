@@ -1,0 +1,43 @@
+<div class="row mar-b-50">
+    <div class="col-md-12">
+        <div class="text-center feature-head wow fadeInDown">
+            <h1 class="">
+                Welcome To Restaurantz
+            </h1>
+        </div>
+        <div class="feature-box">
+            <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+                <div class="feature-box-heading">
+                    <h4>
+                        <b>Fast Food</b>
+                    </h4>
+                </div>
+                <% @fast_food_restaurants.limit(4).each do |restaurant| %>
+                    <ul style="list-style: none;">
+                        <li>
+                            <%= link_to restaurant.name, restaurant %>
+                        </li>
+                    </ul>
+                <% end %>
+                <%= link_to "See All", search_restaurants_path(category: @fast_food_search.id, class: "btn btn-info btn-xs" %>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+                <div class="feature-box-heading">
+                    <h4>
+                        <b>Steak</b>
+                    </h4>
+                </div>
+                <% @steak_house_restaurants.limit(4).each do |restaurant| %>
+                    <ul style="list-style: none;">
+                        <li>
+                            <%= link_to restaurant.name, restaurant %>
+                        </li>
+                    </ul>
+                <% end %>
+                <%= link_to "See All", search_restaurants_path(category: @steak_house_search.id, class: "btn btn-info btn-xs" %>
+            </div>
+        </div>
+    </div>
+</div>
