@@ -1,0 +1,29 @@
+<% if params[:category] == '1' %>
+    Fast Food  
+<% end %>
+
+<% if params[:category] == '2' %>
+    Seafood 
+<% end %>
+
+<% if params[:category] == '3' %>
+    Steak  
+<% end %>
+
+<% if params[:category] == '4' %>
+    Chinese
+<% end %>
+
+<% if params[:category] == '5' %>
+    Family 
+<% end %>
+
+<% if params[:category] == '6' %>
+    Coffee
+<% end %>
+<br />
+<% if @restaurants.blank? %> 
+    (No Results Found)
+<% end %>
+
+
