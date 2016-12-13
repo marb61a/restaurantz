@@ -6,6 +6,11 @@ class RestaurantsController < ApplicationController
   
   def index
     if current_user
+      @vlat = @user.latitude
+      @vlon = @user.longitude
+        
+      visitor_latitude = @user.latitude
+      visitor_longitude = @user.longitude  
       
     else
       
@@ -20,9 +25,9 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
       redirect_to @restaurant
-      flash[:success] = ""
+      flash[:success] = "Great News! #{@user.username} your review has been saved."
     else
-      flash[:error] = ""
+      flash[:error] = "Sorry #{@user.username}, see the errors below and re submit" 
       render :new
     end
   end
@@ -46,20 +51,20 @@ class RestaurantsController < ApplicationController
   
   def update
     if @restaurant.update
-      flash[:success] = ""
+      flash[:success] = "Great News! #{@user.username} The Restaurant has been updated."
       redirect_to @restaurant
     else
-      flash[:danger] = ""
+      flash[:danger] = "Sorry #{@user.username} The Restaurant Edit has some issues."
       render :edit
     end
   end
   
   def destroy
     if @restaurant.destroy
-      flash[:success] = ""
+      flash[:success] = "Okay Then #{@user.username} You have deleted the Restaurant."
       redirect_to root_path
     else
-      flash[:danger] = ""
+      flash[:danger] = "Sorry #{@user.username} There seems to be a problem with your delete request."
       render @restaurant
     end
   end
@@ -68,7 +73,7 @@ class RestaurantsController < ApplicationController
   
     def admin?
       if !current_user.try(:admin?)
-        flash[:danger] = "You are not authourized to access this resource."
+        flash[:danger] = "You are not authorised to access this location."
         redirect_to root_path
       end
     end 

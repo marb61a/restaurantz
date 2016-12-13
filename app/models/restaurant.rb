@@ -12,6 +12,9 @@ class Restaurant < ApplicationRecord
     end
     
     def self.search(params)
+        restaurants = Restaurant.where(category_id: params[:category].to_i)
+        
+        
     end
     
 end
