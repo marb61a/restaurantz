@@ -32,7 +32,32 @@
             <div class="col-lg-5">
                 <div class="about-carousel wow fadeInLeft">
                     <div id="myCarousel" class="carousel slide">
-                        
+                        <div class="carousel-inner"> <!-- Carousel items -->
+                            <div class="active item">
+                                <img src="<%= @restaurant_1.image_url(:search_page) %>" alt="">
+                                <div class="carousel-caption">
+                                    <p>Distinctive Quality</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="<%= @restaurant_2.image_url(:search_page) %>" alt=""> 
+                                <div class="carousel-caption">
+                                    <p>Always Delicious</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="<%= @restaurant_3.image_url(:search_page) %>" alt="">  
+                                <div class="carousel-caption">
+                                    <p>Always Appetizing</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev"> <!-- Carousel nav -->
+                            <i class="fa fa-angle-left"></i>    
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>    
+                        </a>
                     </div>
                 </div>
             </div>
