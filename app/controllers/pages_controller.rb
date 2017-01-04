@@ -20,22 +20,40 @@ class PagesController < ApplicationController
     @page = Page.find(2)  
   end
   
+  # GET /pages/1
+  # GET /pages/1.json
   def show
     @restaurant_1 = Restaurant.find(1)
     @restaurant_2 = Restaurant.find(2)
     @restaurant_3 = Restaurant.find(3)  
   end
   
+  # GET /pages/new
   def new
     redirect_to root_path
     flash[:danger] = "You are unable to access this area"
   end
   
+  # GET /pages/1/edit
   def edit
   end
   
+  # POST /pages
+  # POST /pages.json
+
+
+  # PATCH/PUT /pages/1
+  # PATCH/PUT /pages/1.json
   def update
-    
+    respond_to do |format|
+      if @page.update(page_params)
+        format.html{ redirect_to @page, notice: 'Page was successfully updated.' }
+        format.json{ render :show, status: :ok, location: @page }
+      else
+        format.html{ render :edit }
+        format.json{ render json: @page.errors, status: :unprocessable_entity }
+      end
+    end
   end
   
   private
