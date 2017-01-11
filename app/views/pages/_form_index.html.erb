@@ -1,0 +1,13 @@
+<h1>
+    Editing <%= @page.page_name %>
+</h1>
+<%= simple_form_for(@page) do |f| %>
+    <%= f.button :submit %>
+        <h3>Page Name </h3>
+        <%= f.input :page_name, label: false %>
+        
+        <h3>Main Title</h3>
+        <%= f.input :string_1, label: false %>
+        
+        <%= f.button :submit %>
+<% end %>
