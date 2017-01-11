@@ -1,0 +1,42 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1><%= @page.page_name %></h1>
+            </div>
+            <!--<div class="col-lg-8 col-sm-8">-->
+            <!--  <ol class="breadcrumb pull-right">-->
+            <!--    <li>-->
+            <!--      <a href="#">-->
+            <!--        Home-->
+            <!--      </a>-->
+            <!--    </li>-->
+            <!--    <li>-->
+            <!---->
+            <!--      <a href="#">-->
+            <!--        Pages-->
+            <!--      </a>-->
+            <!--    </li>-->
+            <!--    <li class="active">-->
+            <!--      About-->
+            <!--    </li>-->
+            <!--  </ol>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div> <!--breadcrumbs end-->
+
+<!-- Page Content -->
+<div class="container">
+    <header class="jumbotron hero-spacer"> <!-- Jumbotron Header -->
+        <h1>
+            <%= @page.string_1 %>
+        </h1>  
+        <p>
+            <%= @page.text_1.html_safe %> 
+        </p>
+        <p>
+            <a class="btn btn-primary btn-large"> Call to action! </a>
+        </p>
+    </header>
+</div>
