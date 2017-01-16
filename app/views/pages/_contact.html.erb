@@ -1,0 +1,61 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1><%= @page.page_name %></h1>
+            </div>
+            <!--<div class="col-lg-8 col-sm-8">-->
+            <!--  <ol class="breadcrumb pull-right">-->
+            <!--    <li>-->
+            <!--      <a href="#">-->
+            <!--        Home-->
+            <!--      </a>-->
+            <!--    </li>-->
+            <!--    <li>-->
+            <!---->
+            <!--      <a href="#">-->
+            <!--        Pages-->
+            <!--      </a>-->
+            <!--    </li>-->
+            <!--    <li class="active">-->
+            <!--      Contacts-->
+            <!--    </li>-->
+            <!--  </ol>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div> <!--breadcrumbs end-->
+
+<div class="container"> <!--container start-->
+    <div class="row">
+        <div class="col-lg-5 col-sm-5 address">
+            <section class="contact-infos">
+                <h4 class="title custom-font text-black">
+                    <%= @page.string_1 %>
+                </h4>
+                <address><%= @page.text_1 %></address>
+            </section>
+            <section class="contact-infos">
+                <h4>
+                    <%= @page.string_10 %>
+                </h4>
+                <%= @page.text_2 %>
+            </section>
+            <section class="contact-infos">
+                <h4>
+                    <%= @page.string_2 %>
+                </h4>
+                <%= @page.text_3 %>    
+            </section>
+        </div>
+        <div class="col-lg-7 col-sm-7 address">
+            <h4>Drop us a line so that we can hear from you</h4>
+            <div class="contact-form">
+                <form role="form">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
