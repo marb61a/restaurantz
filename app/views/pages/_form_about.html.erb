@@ -1,0 +1,72 @@
+<%= tinymce_assets %><%= tinymce %>
+<h1>Editing <%= @page.page_name %></h1>
+<%= simple_form_for(@page) do |f| %>
+    <%= f.button :submit %>
+        <h3>Page Title</h3>
+            <%= f.input :page_name, label: false %>
+        <h3>Main Text Head</h3>
+            <%= f.input :text_1, label: false %>
+        <h3>Sub Heading</h3>
+            <%= f.input :string_1, label: false %>
+        <h3>Sub Title 1</h3>
+            <%= f.input : string_2, label: false %>
+        <h3>Sub Title 2</h3>
+            <%= f.input :string_4, label: false %>
+        <h3>Sub Text 2</h3>
+            <%= f.input :string_5, label: false %>
+        <h3>Sub Title 3</h3>
+            <%= f.input :string_6, label: false %>
+        <h3>Sub Text 3</h3>
+            <%= f.input :string_7, label: false %>
+        <h3>Sub Title 4</h3>
+            <%= f.input :string_8, label: false %>
+        <h3>Sub Text 4</h3>
+            <%= f.input :string_9, label: false %>
+        <h3>Slider Main Title</h3>
+            <%= f.input :string_10, label: false %>
+        <h3>Slider 1 Name</h3>
+            <%= f.input :string_11, label: false %>
+        <h3>Slider 1 Percent</h3>
+            <%= f.input :integer_1, label: false %>
+        <h3>Slider 2 Name</h3>
+            <%= f.input :string_12, label: false %>
+        <h3>Slider 2 Percent</h3>
+            <%= f.input :integer_2, label: false %>
+        <h3>Slider 3 Name</h3>
+            <%= f.input :string_13, label: false %>
+        <h3>Slider 3 Percent</h3>
+            <%= f.input :integer_3, label: false %>
+        <h3>Slider 4 Name</h3>
+            <%= f.input :string_14, label: false %>
+        <h3>Slider 4 Percent</h3>
+            <%= f.input :integer_4, label: false %>
+        <h3>Bottom Title</h3>
+            <%= f.input :string_15, label: false %>
+    
+        <h3>Image Title 1</h3>
+            <%= f.input :text_2, label: false %>
+        <h3>Image Text 1</h3>
+            <%= f.input :text_3, label: false %>
+        <h3>Image 1</h3>
+            <%= f.input :image_1, as: :file,  label: false %>
+        <h3>Image Title 2</h3>
+            <%= f.input :text_4, label: false %>
+        <h3>Image Text 2</h3>
+            <%= f.input :text_5, label: false %>
+        <h3>Image 2</h3>
+            <%= f.input :image_2, as: :file,  label: false %>
+        <h3>Image Title 3</h3>
+            <%= f.input :text_6, label: false %>
+        <h3>Image Text 3</h3>
+            <%= f.input :text_7, label: false %>
+        <h3>Image 3</h3>
+            <%= f.input :image_3, as: :file,  label: false %>
+        <h3>Image Title 4</h3>
+            <%= f.input :text_8, label: false %>
+        <h3>Image Text 4</h3>
+            <%= f.input :text_9, label: false %>
+        <h3>Image 4</h3>
+            <%= f.input :image_4, as: :file,  label: false %>
+    
+    <%= f.button :submit %>
+<% end %>
