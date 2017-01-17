@@ -29,6 +29,7 @@ gem 'geocoder', '~> 1.3', '>= 1.3.5'
 gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'fog', '~> 1.38'
+gem 'tinymce-rails', '~> 4.3', '>= 4.3.12'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -1,0 +1,43 @@
+<%= tinymce_assets %><%= tinymce %>
+<h1>Editing <%= @page.page_name %></h1>
+<%= simple_form_for(@page) do |f| %>
+    <h3>Page Title</h3>
+        <%= f.input :page_name %>
+    <h3>Address Title</h3>
+        <%= f.input :string_1, label: false %>
+    <h3>Address Body</h3>
+        <%= f.input :text_1, label: false %>
+    <h3>Hours Title</h3>
+        <%= f.input :string_10, label: false  %>
+    <h3>Hours Body</h3>
+        <%= f.input :text_2, label: false %>
+    <h3>Telephone Title</h3>
+        <%= f.input :string_2, label: false %>
+    <h3>Telephone Body</h3>
+        <%= f.input :text_3, label: false %>
+    <h3>Carousel Title</h3>
+        <%= f.input :string_3, label: false %>
+    
+    <h3>Carousel Image 1 Quote</h3>
+        <%= f.input :string_4, label: false %>
+    <h3>Carousel Image 1 Name</h3>
+        <%= f.input :string_5, label: false %>
+    <h3>Carousel Image 1 Image</h3>
+        <%= f.input :image_1, as: :file, label: false %>
+    
+    <h3>Carousel Image 2 Quote</h3>
+        <%= f.input :string_6, label: false %>
+    <h3>Carousel Image 2 Name</h3>
+        <%= f.input :string_7, label: false %>
+    <h3>Carousel Image 2 Image</h3>
+        <%= f.input :image_2, as: :file, label: false %>
+    
+    <h3>Carousel Image 3 Quote</h3>
+        <%= f.input :string_8, label: false %>
+    <h3>Carousel Image 3 Name</h3>
+        <%= f.input :string_9, label: false %>
+    <h3>Carousel Image 3 Image</h3>
+        <%= f.input :image_3, as: :file, label: false %>
+
+    <%= f.button :submit %>
+<% end %>
