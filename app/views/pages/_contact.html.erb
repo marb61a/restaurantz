@@ -90,6 +90,45 @@
   <div id="map-canvas" style="width: 100%; height: 400px"></div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 text-center">
+            <h2><%= @page.string_3 %></h2>
+        </div>  
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 mar-b-30">
+            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <ol class="carousel-indicators"> <!-- Bottom Carousel Indicators -->
+                    <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#quote-carousel" data-slide-to="1"></li>
+                    <li data-target="#quote-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner"> <!-- Carousel Slides / Quotes -->
+                    <div class="item-active"> <!-- Quote 1 -->
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="img/person_1.png" style="width: 100px;height:100px;" alt="">
+                                      <%= image_tag @page.image_1_url(:small) %>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>
+                                        <%= @page.string_4 %>   
+                                    </p>
+                                    <small>
+                                        <%= @page.string_5 %>
+                                    </small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <%= render "pages/contact_script" %>
 <!-- js placed at the end of the document so the pages load faster -->
     
