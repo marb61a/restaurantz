@@ -61,10 +61,49 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <%= image_tag @page.image_2_url(:pages) if @page.image_2_url(:pages).present? %>
+                <div class="caption">
+                    <h3>
+                        <%= @page.string_5 %>
+                    </h3>
+                    <p>
+                        <%= @page.string_6 %>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <%= image_tag @page.image_3_url(:pages) if @page.image_2_url(:pages).present? %>
+                <div class="caption">
+                    <h3>
+                        <%= @page.string_7 %>
+                    </h3>
+                    <p>
+                        <%= @page.string_8 %>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <%= image_tag @page.image_4_url(:pages) if @page.image_2_url(:pages).present? %>
+                <div class="caption">
+                    <h3>
+                        <%= @page.string_9 %>
+                    </h3>
+                    <p>
+                        <%= @page.string_10 %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.row -->
+    <hr>
+</div> <!-- /.container -->
 
-
-    <script src="js/jquery.js"></script> <!-- jQuery -->
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
