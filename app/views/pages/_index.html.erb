@@ -47,6 +47,21 @@
             </h3>
         </div>
     </div>
+    <div class="row text-center"> <!-- Page Features -->
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <%= image_tag @page.image_1_url(:pages) if @page.image_2_url(:pages).present? %>
+                <div class="caption">
+                    <h3>
+                        <%= @page.string_3 %>
+                    </h3>
+                    <p>
+                        <%= @page.string_4 %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
