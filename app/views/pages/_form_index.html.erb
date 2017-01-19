@@ -1,13 +1,41 @@
+<%= tinymce_assets %><%= tinymce %>
 <h1>
     Editing <%= @page.page_name %>
 </h1>
 <%= simple_form_for(@page) do |f| %>
     <%= f.button :submit %>
         <h3>Page Name </h3>
-        <%= f.input :page_name, label: false %>
-        
+            <%= f.input :page_name, label: false %>
         <h3>Main Title</h3>
-        <%= f.input :string_1, label: false %>
+            <%= f.input :string_1, label: false %>
+        <h3>Main Text</h3>
+            <%= f.text_area :text_1, label: false, class: "tinymce" %>
+        <h3>Main Image Title</h3>
+            <%= f.input :string_2, label: false %>
+        <h3>Image One Title</h3>
+            <%= f.input :string_3, label: false %>
+        <h3>Image One Text</h3>
+            <%= f.input :string_4, label: false %>
+        <h3>Image One Image</h3>
+            <%= f.input :image_1, as: :file, label: false %>
+        <h3>Image Two Title</h3>
+            <%= f.input :string_5, label: false %>
+        <h3>Image Two Text</h3>
+            <%= f.input :string_6, label: false %>
+        <h3>Image Two Image</h3>
+            <%= f.input :image_2, as: :file, label: false %>
+        <h3>Image Three Title</h3>
+            <%= f.input :string_7, label: false %>
+        <h3>Image Three Text</h3>
+            <%= f.input :string_8, label: false %>
+        <h3>Image Three Image</h3>
+            <%= f.input :image_3, as: :file, label: false %>
+        <h3>Image Four Title</h3>
+            <%= f.input :string_9, label: false %>
+        <h3>Image Four Text</h3>
+            <%= f.input :string_10, label: false %>
+        <h3>Image Four Image</h3>
+            <%= f.input :image_4, as: :file, label: false %>
         
         <%= f.button :submit %>
 <% end %>
