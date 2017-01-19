@@ -132,7 +132,55 @@
                 <div class="col-lg-7" id="skillz">
                     <h3 class="skillz">
                         <%= @page.string_10 %>
-                    </h3>    
+                    </h3>  
+                    <div class="skill_bar">
+                        <div class="skill_bar_progress skill_one">
+                            <p>
+                                <%= @page.string_11 %>    
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill_bar">
+                        <div class="skill_bar_progress skill_two">
+                            <p>
+                                <%= @page.string_12 %>    
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill_bar">
+                        <div class="skill_bar_progress skill_three">
+                            <p>
+                                <%= @page.string_13 %>    
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill_bar">
+                        <div class="skill_bar_progress skill_four">
+                            <p>
+                                <%= @page.string_14 %>    
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="tourpackages-carousel">
+        <div class="row">
+            <div class="profile">
+                <h2>
+                    <%= @page.string_15 %>
+                </h2>  
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <%= image_tag @page.image_1_url(:pages) if @page.image_2_url(:pages).present? %>
+                    <div class="caption">
+                        <h4>
+                            <%= @page.text_2 %>
+                        </h4>
+                        <p>
+                            <%= @page.text_3 %>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
