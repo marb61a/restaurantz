@@ -26,8 +26,11 @@ class RestaurantsController < ApplicationController
       @coffee_restaurants = Restaurant.where(category_id: 6).near([visitor_latitude, visitor_longitude], 200)
       @coffee_search = Category.find(6)
     else
-      visitor_latitude = request.location.latitude
-      visitor_longitude = request.location.longitude
+      # visitor_latitude = request.location.latitude
+      # visitor_longitude = request.location.longitude
+      
+      visitor_latitude = 33.7489954
+      visitor_longitude = -84.3879824 
       
       @vlat = visitor_latitude
       @vlon = visitor_longitude

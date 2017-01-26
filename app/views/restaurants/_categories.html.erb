@@ -108,3 +108,21 @@
         </div>
     </div>
 </div>
+<div class="feature-box">
+  <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+    <div class="feature-box-heading">
+      <h4>
+        <b>Coffee</b>
+      </h4>
+    </div>
+    <% @coffee_restaurants.limit(4).each do |restaurant| %>
+      <ul style="list-style: none;">
+       <li><%= link_to restaurant.name, restaurant %></li>
+      </ul> 
+    <% end %>
+    <%= link_to "See All", search_restaurants_path(category: @coffee_search.id), 
+    class: "btn btn-info btn-xs" %> 
+      </div>
+     </div>
+  </div>
+</div>
